@@ -1,0 +1,11 @@
+# This is experimental
+
+language: csharp
+install:
+  - nuget install Newtonsoft.Json -Version 8.0.3
+  - mcs -r:Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll,System.Web.dll,System.Net.Http.dll IdentityCheck.cs
+  - mcs -r:Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll,System.Web.dll,System.Net.Http.dll LeadVerify.cs
+script:
+  - cp Newtonsoft.Json.8.0.3/lib/net45/Newtonsoft.Json.dll .
+  - mono LeadVerify.exe
+  - mono IdentityCheck.exe
