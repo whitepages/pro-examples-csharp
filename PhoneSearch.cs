@@ -14,10 +14,10 @@ namespace Identity_Check_Sample
             UriBuilder uri = new UriBuilder();
             uri.Scheme = "https";
             uri.Host = "proapi.whitepages.com";
-            uri.Path = "/3.0/caller_identification";
+            uri.Path = "/3.0/phone";
 
             var parameters = HttpUtility.ParseQueryString(string.Empty);
-            parameters.Add("api_key", Environment.GetEnvironmentVariable("CALLER_ID_API_KEY"));
+            parameters.Add("api_key", Environment.GetEnvironmentVariable("PHONE_SEARCH_API_KEY"));
             parameters.Add("phone", "6464806649");
 
             uri.Query = parameters.ToString();
