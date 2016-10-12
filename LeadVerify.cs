@@ -23,7 +23,7 @@ namespace Lead_Verify_Sample
             parameters.Add("email_address", "medjalloh1@yahoo.com");
             parameters.Add("address_city", "Ashland");
             parameters.Add("address.postal_code", "59004");
-            parameters.Add("address.state", "MT");
+            parameters.Add("address.state_code", "MT");
             parameters.Add("address.street_line_1", "302 Gorham Ave");
             parameters.Add("ip_address", "108.194.128.165");
 
