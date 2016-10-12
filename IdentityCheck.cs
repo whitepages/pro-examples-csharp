@@ -24,14 +24,14 @@ namespace Identity_Check_Sample
             parameters.Add("billing.address.city", "Ashland");
             parameters.Add("billing.address.state_code", "MT");
             parameters.Add("billing.address.postal_code", "59004");
-            parameters.Add("billing.assress.country_code", "US");
+            parameters.Add("billing.address.country_code", "US");
             parameters.Add("shipping.name", "Drama Number");
             parameters.Add("shipping.phone", "6464806649");
             parameters.Add("shipping.address.street_line_1", "302 Gorham Ave");
             parameters.Add("shipping.address.city", "Ashland");
             parameters.Add("shipping.address.state_code", "MT");
             parameters.Add("shipping.address.postal_code", "59004");
-            parameters.Add("shipping.assress.country_code", "US");
+            parameters.Add("shipping.address.country_code", "US");
             parameters.Add("email_address", "medjalloh1@yahoo.com");
             parameters.Add("ip_address", "108.194.128.165");
 
