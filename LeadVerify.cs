@@ -14,7 +14,7 @@ namespace Lead_Verify_Sample
             UriBuilder uri = new UriBuilder();
             uri.Scheme = "https";
             uri.Host = "proapi.whitepages.com";
-            uri.Path = "/3.1/lead_verify.json";
+            uri.Path = "/3.3/lead_verify.json";
 
             var parameters = HttpUtility.ParseQueryString(string.Empty);
             parameters.Add("api_key", Environment.GetEnvironmentVariable("LEAD_VERIFY_API_KEY"));
@@ -24,6 +24,7 @@ namespace Lead_Verify_Sample
             parameters.Add("address_city", "Ashland");
             parameters.Add("address.postal_code", "59004");
             parameters.Add("address.state_code", "MT");
+            parameters.Add("address.country_code", "US");
             parameters.Add("address.street_line_1", "302 Gorham Ave");
             parameters.Add("ip_address", "108.194.128.165");
 
@@ -35,7 +36,7 @@ namespace Lead_Verify_Sample
                 // Parse JSON response
                 var jsonMap = JObject.Parse(rawJson);
 
-                var availableChecks = new [] {"name_checks", "phone_checks", "address_checks", "email_address_checks",
+                var availableChecks = new [] {"phone_checks", "address_checks", "email_address_checks",
                                               "ip_address_checks"};
 
                 // Display phone check results
